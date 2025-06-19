@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flexbox Layout with Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #0077cc;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+     nav a {
+  position: relative;
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav a:hover {
+  color: #ffcc00;
+}
+
+
+    .main {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      height: 100vh;
+    }
+
+    .main img {
+      width: 20%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 60%;
+    }
+
+    form {
+      margin: auto;
+      width: 300px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      box-sizing: border-box;
+
+      /* ✅ Add this to center contents inside the box */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 20px;
+      width: 100%;
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+
+    footer {
+      background-color: #f0f0f0;
+      text-align: center;
+      padding: 1rem;
+      font-weight: bold;
+    }
+
+    @media screen and (max-width: 768px) {
+      .main {
+        flex-direction: column;
+        height: auto;
+        gap: 20px;
+      }
+
+      .main img {
+        width: 100%;
+        height: auto;
+      }
+
+      .text {
+        width: 100%;
+        padding: 0 10px;
+      }
+
+      form {
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="last assigment.html">Home</a>
+      <a href="service.html">Service</a>
+    </nav>
+  </header>
+
+  <div class="main">
+    <img src="flah.jpg" alt="Left Image" />
+
+    <div class="text">
+      <form>
+        <input type="email" name="email" placeholder="Email"><br>
+        <input type="text" name="subject" placeholder="Subject"><br>
+        <textarea name="message" rows="5" placeholder="Message"></textarea><br>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+
+    <img src="flah.jpg" alt="Right Image" />
+  </div>
+
+  <footer>
+    Student ID: CS1500913 <br>Name: abdulaahi abdi mohamuud
+  </footer>
+
+</body>
+</html>

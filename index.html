@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flexbox Layout</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #0077cc;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+     nav a {
+  position: relative;
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav a:hover {
+  color: #ffcc00;
+}
+
+
+    .main {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100vh;
+      padding: -5 20px;
+    }
+
+    .main img {
+      width: 20%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .main .text {
+      font-size: 1.5rem;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    footer {
+      background-color: #f0f0f0d2;
+      text-align: center;
+      padding: 1rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="last assigment.html">Home</a>
+      <a href="service.html">Service</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="main">
+    <img src="flah.jpg" alt="Left Image" />
+    
+    <div class="text">
+      Welcome to our<br>website
+    </div>
+    
+    <img src="flah.jpg" alt="Right Image" />
+  </div>
+
+  <footer>
+    Student ID: CS1500913 <br>Name: abdulaahi abdi mohamuud
+  </footer>
+
+</body>
+</html>
